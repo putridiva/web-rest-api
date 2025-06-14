@@ -9,18 +9,14 @@ import tensorflow as tf
 # Inisialisasi aplikasi FastAPI
 app = FastAPI()
 
-origins = [
-    "https://putridiva.github.io",
-]
-
-# Middleware CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,            
+    allow_origins=["https://putridiva.github.io"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # Load model
 model = tf.keras.models.load_model("my_model.keras")
