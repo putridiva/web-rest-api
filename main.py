@@ -10,7 +10,7 @@ import tensorflow as tf
 app = FastAPI()
 
 origins = [
-    "https://poetryrepo.github.io",
+    "https://putridiva.github.io",
 ]
 
 # Middleware CORS
